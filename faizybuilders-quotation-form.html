@@ -1,239 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62XELEKH1N"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-62XELEKH1N');
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faizy Builders - Professional Quotation Form</title>
+
+<title>Construction Request Form | Faizy Builders</title>
+
 <style>
+
 body{
     font-family:Arial,sans-serif;
-    background:#f3f4f6;
+    font-size:16px;
+    background:#f5f5f5;
     margin:0;
     padding:20px;
-    line-height:1.5;
 }
 
-.container{
-    max-width:900px;
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+form{
+    max-width:700px;
     margin:auto;
     background:#fff;
-    border-radius:12px;
-    padding:30px;
-    box-shadow:0 5px 18px rgba(0,0,0,.12);
-}
-
-h1{
-    text-align:center;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-@media(max-width:700px){
-    .grid{
-        grid-template-columns:1fr;
-    }
-
-    body{
-        padding:15px;
-    }
-
-    .container{
-        padding:20px;
-    }
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
 }
 
 label{
-    font-weight:bold;
     display:block;
-    margin:10px 0 5px;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-weight:bold;
 }
-h3{
-    margin:25px 0 12px;
-    padding-bottom:8px;
-    border-bottom:2px solid #e5e5e5;
-    color:#333;
-    font-size:20px;
-}
-input,
-textarea,
-select{
+
+select,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea{
+
     width:100%;
-    padding:10px;
+    padding:12px;
     font-size:16px;
+    font-family:Arial,sans-serif;
     border:1px solid #ccc;
-    border-radius:8px;
+    border-radius:5px;
     box-sizing:border-box;
+    -webkit-appearance:none;
+    appearance:none;
 }
 
 textarea{
     resize:vertical;
-    min-height:120px;
 }
 
-details{
-    border:1px solid #ddd;
-    border-radius:8px;
-    margin:10px 0;
-    background:#fafafa;
-}
+button[type="button"],
+button[type="submit"]{
 
-summary{
-    padding:12px 15px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.options{
-    padding:0 15px 15px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:6px;
-}
-
-.options label{
-    font-weight:normal;
-}
-
-button{
-    width:100%;
-    padding:14px;
-    margin-top:20px;
-    background:#0b5ed7;
-    color:#fff;
+    background:#0d6efd;
+    color:white;
     border:none;
-    border-radius:8px;
-    font-size:18px;
+    padding:12px 20px;
+    font-size:16px;
+    font-weight:bold;
+    border-radius:5px;
     cursor:pointer;
+    margin-top:10px;
+    margin-right:8px;
+
 }
 
 button:hover{
-    background:#084298;
-}
-</style>
-</head>
-<body>
-<div class="container">
-<h1>Request a Free Quote</h1>
 
-<form action="https://formsubmit.co/faizybuildersuk@gmail.com" method="POST">
+    background:#0b5ed7;
+
+}
+
+#selected-work{
+
+    margin-top:20px;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    background:#f8f9fa;
+
+}
+
+#subtype-checkbox label{
+
+    display:block;
+    font-weight:normal;
+    margin-top:6px;
+
+}
+
+@media(max-width:768px){
+
+form{
+
+padding:18px;
+
+}
+
+}
+
+</style>
+
+<script>
+
+const constructionOptions={
+
+'Roofing':['Roof Guttering Services, metal, plastic, Cast Iron','Natural Slate work','Roof Leak Repairs','Chimney Repairs','Conservatory Roof','Cowling','Flat Roofing'],
+
+'Carpentry':['Decking','Stairs','Doors and Door Frames','Wooden Floors','Garden Fence'],
+
+'Construction':['Refurbishment','House Extension','Building Conversions','Basement Conversions','Bricklayers','Repointing','Building Renovations','Wall Rendering','Plasterboard Installation'],
+
+'Floor':['Hardwood Flooring','Tile Flooring','Laminate Flooring','Stone/Concrete Flooring','Solid Timber Flooring','New Floor Installation'],
+
+'Tiling':['Ceramic Tiling','Porcelain Tiling','Glass Tiling'],
+
+'Electric Work':['Electric Work'],
+
+'Wood Work':['Rails/Handrails','Door Hanging/Fitting','Wooden Decking','Wooden Flooring'],
+
+'Plumbing':['Pipe Installation','Fixture Repairs','Water Heater Installation','Bath Plumbing','Central Heating System','Leaking Pipes','Under Floor Heating','Household Appliances','Water Heating System','Blocked Showers','Blocked Baths','Blocked Toilets','Gas Boiler Installation','Replacement of Water Heater','Replacement of Water Supply System'],
+
+'Kitchen':['Kitchen Fitting','Worktop Installation','Installation of Glass Stand','Glass Splash-back Installation','Installation of Kitchen Appliances','Assembly of Kitchen Furniture','Installation of Sockets and Switches','Kitchen Laying Tiles','Kitchen Walls','Kitchen Ceiling','Installation of Ventilation System','Installing Water Filtration System','Installation and Connection of Dishwasher','Connecting and Setting Ovens and Hobs','Kitchen Remodeling','Cabinet Installation','Countertop Replacement'],
+
+'Bathroom':['Bathroom Renovation','Tub and Shower Installation','Tile Work','Bath Installation','Washbasin Installation','Installation of Heated Towel Rail','Mirror Installation','Installing Shower Curtains'],
+
+'Doors':['Door Installation','Door Repair','Door Hinge Repair'],
+
+'Painting':['Interior Painting','Exterior Painting','Decorative Painting']
+
+};
+
+let selectedWorkItems=[];
+
+function updateSubtypes(){
+
+const selectedConstructionType=document.getElementById('construction-type').value;
+
+const subtypes=constructionOptions[selectedConstructionType]||[];
+
+const subtypeCheckbox=document.getElementById('subtype-checkbox');
+
+subtypeCheckbox.innerHTML='';
+
+for(const subtype of subtypes){
+
+const label=document.createElement('label');
+
+const input=document.createElement('input');
+
+input.type='checkbox';
+
+input.name='selected-subtypes[]';
+
+input.value=subtype;
+
+label.appendChild(input);
+
+label.appendChild(document.createTextNode(" "+subtype));
+
+subtypeCheckbox.appendChild(label);
+
+}
+
+}
+function addSelectedWork(){
+
+const selectedSubtypes=Array.from(
+document.querySelectorAll('input[name="selected-subtypes[]"]:checked')
+).map(c=>c.value);
+
+selectedSubtypes.forEach(item=>{
+
+if(!selectedWorkItems.includes(item)){
+
+selectedWorkItems.push(item);
+
+}
+
+});
+
+document.querySelectorAll('input[name="selected-subtypes[]"]').forEach(c=>{
+
+c.checked=false;
+
+});
+
+displaySelectedWork();
+
+}
+
+});
+
+document.querySelectorAll('input[name="selected-subtypes[]"]').forEach(c=>{
+
+c.checked=false;
+
+});
+
+displaySelectedWork();
+
+}
+
+}
+
+function displaySelectedWork(){
+
+const selectedWorkBox=document.getElementById('selected-work');
+
+selectedWorkBox.innerHTML="<label>Selected Work:</label>";
+
+selectedWorkItems.forEach(item=>{
+
+const div=document.createElement('div');
+
+div.textContent="✓ "+item;
+
+selectedWorkBox.appendChild(div);
+
+});
+
+document.getElementById("selected-work-input").value=selectedWorkItems.join(", ");
+
+}
+
+function cancelLastSelectedWork(){
+
+selectedWorkItems.pop();
+
+displaySelectedWork();
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Construction Request Form</h2>
+
+<form class="row g-3" action="https://formsubmit.co/faizybuildersuk@gmail.com" method="POST">
+
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_subject" value="New Construction Quote">
+<input type="hidden" name="Selected Work" id="selected-work-input">
 
-<div class="grid">
-<div>
-<label>First Name</label>
-<input name="First Name" required>
+<label>Select Construction Type</label>
+
+<select id="construction-type" onchange="updateSubtypes()">
+
+<option value="">Select...</option>
+<option value="Roofing">Roofing</option>
+<option value="Carpentry">Carpentry</option>
+<option value="Floor">Floor</option>
+<option value="Tiling">Tiling</option>
+<option value="Wood Work">Wood Work</option>
+<option value="Plumbing">Plumbing</option>
+<option value="Kitchen">Kitchen</option>
+<option value="Bathroom">Bathroom</option>
+<option value="Doors">Doors</option>
+<option value="Electric Work">Electric Work</option>
+<option value="Painting">Painting</option>
+<option value="Construction">Construction</option>
+
+</select>
+
+<div id="subtype-checkbox"></div>
+
+<button type="button" onclick="addSelectedWork()">Add to Selected Work</button>
+
+<button type="button" onclick="cancelLastSelectedWork()">Cancel</button>
+
+<div id="selected-work">
+
+<label>Selected Work:</label>
+
 </div>
-<div>
-<label>Last Name</label>
-<input name="Last Name" required>
-</div>
-<div>
-<label>Phone</label>
-<input name="Phone" required>
-</div>
-<div>
-<label>Email</label>
-<input type="email" name="Email" required>
-</div>
-</div>
+<label for="first-name">First Name:</label>
+<input type="text" id="first-name" name="First Name" required>
 
-<label>Postcode</label>
-<input name="Postcode">
+<label for="last-name">Last Name:</label>
+<input type="text" id="last-name" name="Last Name" required>
 
-<label>Property Address</label>
-<textarea name="Address" rows="2"></textarea>
+<label for="phone">Phone:</label>
+<input type="tel" id="phone" name="Phone" required>
 
-<h2>Select Required Services</h2>
+<label for="email">Email:</label>
+<input type="email" id="email" name="Email" required>
 
-<h3>🏠 Roofing</h3>
-<div class="options">
-<label><input type="checkbox" name="Services[]" value="Roof Repairs"> Roof Repairs</label>
-<label><input type="checkbox" name="Services[]" value="New Roof"> New Roof</label>
-<label><input type="checkbox" name="Services[]" value="Flat Roofing"> Flat Roofing</label>
-<label><input type="checkbox" name="Services[]" value="Slate Roofing"> Slate Roofing</label>
-<label><input type="checkbox" name="Services[]" value="Guttering"> Guttering</label>
-<label><input type="checkbox" name="Services[]" value="Chimney Repairs"> Chimney Repairs</label>
-</div>
+<label for="post-code">Post Code:</label>
+<input type="text" id="post-code" name="Postcode" required>
 
-<h3>🏗️ Construction</h3>
-<div class="options">
-<label><input type="checkbox" name="Services[]" value="Extensions"> Extensions</label>
-<label><input type="checkbox" name="Services[]" value="Renovations"> Renovations</label>
-<label><input type="checkbox" name="Services[]" value="Conversions"> Conversions</label>
-<label><input type="checkbox" name="Services[]" value="Brickwork"> Brickwork</label>
-<label><input type="checkbox" name="Services[]" value="Rendering"> Rendering</label>
-<label><input type="checkbox" name="Services[]" value="Plastering"> Plastering</label>
-</div>
-
-<h3>🍽️ Kitchen</h3>
-<div class="options">
-<label><input type="checkbox" name="Services[]" value="Kitchen Fitting"> Kitchen Fitting</label>
-<label><input type="checkbox" name="Services[]" value="Worktops"> Worktops</label>
-<label><input type="checkbox" name="Services[]" value="Appliances"> Appliances</label>
-<label><input type="checkbox" name="Services[]" value="Cabinets"> Cabinets</label>
-</div>
-
-<h3>🛁 Bathroom</h3>
-<div class="options">
-<label><input type="checkbox" name="Services[]" value="Bathroom Renovation"> Bathroom Renovation</label>
-<label><input type="checkbox" name="Services[]" value="Shower"> Shower</label>
-<label><input type="checkbox" name="Services[]" value="Bath"> Bath</label>
-<label><input type="checkbox" name="Services[]" value="Tiling"> Tiling</label>
-</div>
-
-<h3>🚿 Plumbing</h3>
-<div class="options">
-<label><input type="checkbox" name="Services[]" value="Leaks"> Leaks</label>
-<label><input type="checkbox" name="Services[]" value="Boilers"> Boilers</label>
-<label><input type="checkbox" name="Services[]" value="Radiators"> Radiators</label>
-<label><input type="checkbox" name="Services[]" value="Pipework"> Pipework</label>
-</div>
-
-<h3>⚡ Electrical</h3>
-<div class="options">
-<label><input type="checkbox" name="Services[]" value="Sockets"> Sockets</label>
-<label><input type="checkbox" name="Services[]" value="Lighting"> Lighting</label>
-<label><input type="checkbox" name="Services[]" value="Rewiring"> Rewiring</label>
-<label><input type="checkbox" name="Services[]" value="Consumer Unit"> Consumer Unit</label>
-</div>
-
-<h3>🪵 Flooring</h3>
-<div class="options">
-<label><input type="checkbox" name="Services[]" value="Laminate"> Laminate</label>
-<label><input type="checkbox" name="Services[]" value="Hardwood"> Hardwood</label>
-<label><input type="checkbox" name="Services[]" value="Tiles"> Tiles</label>
-<label><input type="checkbox" name="Services[]" value="Vinyl"> Vinyl</label>
-</div>
-
-<h3>🎨 Painting & Decorating</h3>
-<div class="options">
-<label><input type="checkbox" name="Services[]" value="Interior"> Interior</label>
-<label><input type="checkbox" name="Services[]" value="Exterior"> Exterior</label>
-<label><input type="checkbox" name="Services[]" value="Decorating"> Decorating</label>
-</div>
-
-<h3>🪚 Carpentry</h3>
-<div class="options">
-<label><input type="checkbox" name="Services[]" value="Doors"> Doors</label>
-<label><input type="checkbox" name="Services[]" value="Stairs"> Stairs</label>
-<label><input type="checkbox" name="Services[]" value="Decking"> Decking</label>
-<label><input type="checkbox" name="Services[]" value="Fencing"> Fencing</label>
-</div>
-
-<label>Other Service (if not listed)</label>
-<input type="text" name="Other Service" placeholder="Describe the service you need">
-
-<label>Project Details</label>
-<textarea name="Project Details" rows="6" placeholder="Tell us about your project..."></textarea>
+<label for="message">Project Details:</label>
+<textarea id="message"
+          name="Project Details"
+          rows="5"
+          placeholder="Please describe your project..."></textarea>
 
 <button type="submit">Request Free Quotation</button>
+
 </form>
-</div>
+
+<script>
+
+// Show Roofing options automatically when page loads
+window.onload=function(){
+    updateSubtypes();
+};
+
+</script>
+
 </body>
 </html>
