@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faizy Builders - Professional Quotation Form</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f3f4f6;margin:0;padding:20px}
+.container{max-width:900px;margin:auto;background:#fff;border-radius:12px;padding:30px;box-shadow:0 5px 18px rgba(0,0,0,.12)}
+h1{text-align:center}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+label{font-weight:bold;display:block;margin:10px 0 5px}
+input,textarea,select{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;box-sizing:border-box}
+details{border:1px solid #ddd;border-radius:8px;margin:10px 0;background:#fafafa}
+summary{padding:12px 15px;font-weight:bold;cursor:pointer}
+.options{padding:0 15px 15px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px}
+.options label{font-weight:normal}
+button{width:100%;padding:14px;margin-top:20px;background:#0b5ed7;color:#fff;border:none;border-radius:8px;font-size:18px;cursor:pointer}
+button:hover{background:#084298}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Construction Quotation Request</h1>
+
+<form action="https://formsubmit.co/faizybuildersuk@gmail.com" method="POST">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_subject" value="New Construction Quote">
+
+<div class="grid">
+<div>
+<label>First Name</label>
+<input name="First Name" required>
+</div>
+<div>
+<label>Last Name</label>
+<input name="Last Name" required>
+</div>
+<div>
+<label>Phone</label>
+<input name="Phone" required>
+</div>
+<div>
+<label>Email</label>
+<input type="email" name="Email" required>
+</div>
+</div>
+
+<label>Postcode</label>
+<input name="Postcode">
+
+<label>Property Address</label>
+<textarea name="Address" rows="2"></textarea>
+
+<h2>Select Required Services</h2>
+
+<details><summary>Roofing</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Roof Repairs"> Roof Repairs</label><label><input type="checkbox" name="Services[]" value="New Roof"> New Roof</label><label><input type="checkbox" name="Services[]" value="Flat Roofing"> Flat Roofing</label><label><input type="checkbox" name="Services[]" value="Slate Roofing"> Slate Roofing</label><label><input type="checkbox" name="Services[]" value="Guttering"> Guttering</label><label><input type="checkbox" name="Services[]" value="Chimney Repairs"> Chimney Repairs</label></div></details>
+<details><summary>Construction</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Extensions"> Extensions</label><label><input type="checkbox" name="Services[]" value="Renovations"> Renovations</label><label><input type="checkbox" name="Services[]" value="Conversions"> Conversions</label><label><input type="checkbox" name="Services[]" value="Brickwork"> Brickwork</label><label><input type="checkbox" name="Services[]" value="Rendering"> Rendering</label><label><input type="checkbox" name="Services[]" value="Plastering"> Plastering</label></div></details>
+<details><summary>Kitchen</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Kitchen Fitting"> Kitchen Fitting</label><label><input type="checkbox" name="Services[]" value="Worktops"> Worktops</label><label><input type="checkbox" name="Services[]" value="Appliances"> Appliances</label><label><input type="checkbox" name="Services[]" value="Cabinets"> Cabinets</label></div></details>
+<details><summary>Bathroom</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Bathroom Renovation"> Bathroom Renovation</label><label><input type="checkbox" name="Services[]" value="Shower"> Shower</label><label><input type="checkbox" name="Services[]" value="Bath"> Bath</label><label><input type="checkbox" name="Services[]" value="Tiling"> Tiling</label></div></details>
+<details><summary>Plumbing</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Leaks"> Leaks</label><label><input type="checkbox" name="Services[]" value="Boilers"> Boilers</label><label><input type="checkbox" name="Services[]" value="Radiators"> Radiators</label><label><input type="checkbox" name="Services[]" value="Pipework"> Pipework</label></div></details>
+<details><summary>Electrical</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Sockets"> Sockets</label><label><input type="checkbox" name="Services[]" value="Lighting"> Lighting</label><label><input type="checkbox" name="Services[]" value="Rewiring"> Rewiring</label><label><input type="checkbox" name="Services[]" value="Consumer Unit"> Consumer Unit</label></div></details>
+<details><summary>Flooring</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Laminate"> Laminate</label><label><input type="checkbox" name="Services[]" value="Hardwood"> Hardwood</label><label><input type="checkbox" name="Services[]" value="Tiles"> Tiles</label><label><input type="checkbox" name="Services[]" value="Vinyl"> Vinyl</label></div></details>
+<details><summary>Painting</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Interior"> Interior</label><label><input type="checkbox" name="Services[]" value="Exterior"> Exterior</label><label><input type="checkbox" name="Services[]" value="Decorating"> Decorating</label></div></details>
+<details><summary>Carpentry</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Doors"> Doors</label><label><input type="checkbox" name="Services[]" value="Stairs"> Stairs</label><label><input type="checkbox" name="Services[]" value="Decking"> Decking</label><label><input type="checkbox" name="Services[]" value="Fencing"> Fencing</label></div></details>
+
+<label>Other Service (if not listed)</label>
+<input type="text" name="Other Service" placeholder="Describe the service you need">
+
+<label>Project Details</label>
+<textarea name="Project Details" rows="6" placeholder="Tell us about your project..."></textarea>
+
+<button type="submit">Request Free Quotation</button>
+</form>
+</div>
+</body>
+</html>
