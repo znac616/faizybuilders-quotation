@@ -51,7 +51,13 @@ label{
     display:block;
     margin:10px 0 5px;
 }
-
+h3{
+    margin:25px 0 12px;
+    padding-bottom:8px;
+    border-bottom:2px solid #e5e5e5;
+    color:#333;
+    font-size:20px;
+}
 input,
 textarea,
 select{
@@ -145,15 +151,80 @@ button:hover{
 
 <h2>Select Required Services</h2>
 
-<details><summary>Roofing</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Roof Repairs"> Roof Repairs</label><label><input type="checkbox" name="Services[]" value="New Roof"> New Roof</label><label><input type="checkbox" name="Services[]" value="Flat Roofing"> Flat Roofing</label><label><input type="checkbox" name="Services[]" value="Slate Roofing"> Slate Roofing</label><label><input type="checkbox" name="Services[]" value="Guttering"> Guttering</label><label><input type="checkbox" name="Services[]" value="Chimney Repairs"> Chimney Repairs</label></div></details>
-<details><summary>Construction</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Extensions"> Extensions</label><label><input type="checkbox" name="Services[]" value="Renovations"> Renovations</label><label><input type="checkbox" name="Services[]" value="Conversions"> Conversions</label><label><input type="checkbox" name="Services[]" value="Brickwork"> Brickwork</label><label><input type="checkbox" name="Services[]" value="Rendering"> Rendering</label><label><input type="checkbox" name="Services[]" value="Plastering"> Plastering</label></div></details>
-<details><summary>Kitchen</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Kitchen Fitting"> Kitchen Fitting</label><label><input type="checkbox" name="Services[]" value="Worktops"> Worktops</label><label><input type="checkbox" name="Services[]" value="Appliances"> Appliances</label><label><input type="checkbox" name="Services[]" value="Cabinets"> Cabinets</label></div></details>
-<details><summary>Bathroom</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Bathroom Renovation"> Bathroom Renovation</label><label><input type="checkbox" name="Services[]" value="Shower"> Shower</label><label><input type="checkbox" name="Services[]" value="Bath"> Bath</label><label><input type="checkbox" name="Services[]" value="Tiling"> Tiling</label></div></details>
-<details><summary>Plumbing</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Leaks"> Leaks</label><label><input type="checkbox" name="Services[]" value="Boilers"> Boilers</label><label><input type="checkbox" name="Services[]" value="Radiators"> Radiators</label><label><input type="checkbox" name="Services[]" value="Pipework"> Pipework</label></div></details>
-<details><summary>Electrical</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Sockets"> Sockets</label><label><input type="checkbox" name="Services[]" value="Lighting"> Lighting</label><label><input type="checkbox" name="Services[]" value="Rewiring"> Rewiring</label><label><input type="checkbox" name="Services[]" value="Consumer Unit"> Consumer Unit</label></div></details>
-<details><summary>Flooring</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Laminate"> Laminate</label><label><input type="checkbox" name="Services[]" value="Hardwood"> Hardwood</label><label><input type="checkbox" name="Services[]" value="Tiles"> Tiles</label><label><input type="checkbox" name="Services[]" value="Vinyl"> Vinyl</label></div></details>
-<details><summary>Painting</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Interior"> Interior</label><label><input type="checkbox" name="Services[]" value="Exterior"> Exterior</label><label><input type="checkbox" name="Services[]" value="Decorating"> Decorating</label></div></details>
-<details><summary>Carpentry</summary><div class="options"><label><input type="checkbox" name="Services[]" value="Doors"> Doors</label><label><input type="checkbox" name="Services[]" value="Stairs"> Stairs</label><label><input type="checkbox" name="Services[]" value="Decking"> Decking</label><label><input type="checkbox" name="Services[]" value="Fencing"> Fencing</label></div></details>
+<h3>🏠 Roofing</h3>
+<div class="options">
+<label><input type="checkbox" name="Services[]" value="Roof Repairs"> Roof Repairs</label>
+<label><input type="checkbox" name="Services[]" value="New Roof"> New Roof</label>
+<label><input type="checkbox" name="Services[]" value="Flat Roofing"> Flat Roofing</label>
+<label><input type="checkbox" name="Services[]" value="Slate Roofing"> Slate Roofing</label>
+<label><input type="checkbox" name="Services[]" value="Guttering"> Guttering</label>
+<label><input type="checkbox" name="Services[]" value="Chimney Repairs"> Chimney Repairs</label>
+</div>
+
+<h3>🏗️ Construction</h3>
+<div class="options">
+<label><input type="checkbox" name="Services[]" value="Extensions"> Extensions</label>
+<label><input type="checkbox" name="Services[]" value="Renovations"> Renovations</label>
+<label><input type="checkbox" name="Services[]" value="Conversions"> Conversions</label>
+<label><input type="checkbox" name="Services[]" value="Brickwork"> Brickwork</label>
+<label><input type="checkbox" name="Services[]" value="Rendering"> Rendering</label>
+<label><input type="checkbox" name="Services[]" value="Plastering"> Plastering</label>
+</div>
+
+<h3>🍽️ Kitchen</h3>
+<div class="options">
+<label><input type="checkbox" name="Services[]" value="Kitchen Fitting"> Kitchen Fitting</label>
+<label><input type="checkbox" name="Services[]" value="Worktops"> Worktops</label>
+<label><input type="checkbox" name="Services[]" value="Appliances"> Appliances</label>
+<label><input type="checkbox" name="Services[]" value="Cabinets"> Cabinets</label>
+</div>
+
+<h3>🛁 Bathroom</h3>
+<div class="options">
+<label><input type="checkbox" name="Services[]" value="Bathroom Renovation"> Bathroom Renovation</label>
+<label><input type="checkbox" name="Services[]" value="Shower"> Shower</label>
+<label><input type="checkbox" name="Services[]" value="Bath"> Bath</label>
+<label><input type="checkbox" name="Services[]" value="Tiling"> Tiling</label>
+</div>
+
+<h3>🚿 Plumbing</h3>
+<div class="options">
+<label><input type="checkbox" name="Services[]" value="Leaks"> Leaks</label>
+<label><input type="checkbox" name="Services[]" value="Boilers"> Boilers</label>
+<label><input type="checkbox" name="Services[]" value="Radiators"> Radiators</label>
+<label><input type="checkbox" name="Services[]" value="Pipework"> Pipework</label>
+</div>
+
+<h3>⚡ Electrical</h3>
+<div class="options">
+<label><input type="checkbox" name="Services[]" value="Sockets"> Sockets</label>
+<label><input type="checkbox" name="Services[]" value="Lighting"> Lighting</label>
+<label><input type="checkbox" name="Services[]" value="Rewiring"> Rewiring</label>
+<label><input type="checkbox" name="Services[]" value="Consumer Unit"> Consumer Unit</label>
+</div>
+
+<h3>🪵 Flooring</h3>
+<div class="options">
+<label><input type="checkbox" name="Services[]" value="Laminate"> Laminate</label>
+<label><input type="checkbox" name="Services[]" value="Hardwood"> Hardwood</label>
+<label><input type="checkbox" name="Services[]" value="Tiles"> Tiles</label>
+<label><input type="checkbox" name="Services[]" value="Vinyl"> Vinyl</label>
+</div>
+
+<h3>🎨 Painting & Decorating</h3>
+<div class="options">
+<label><input type="checkbox" name="Services[]" value="Interior"> Interior</label>
+<label><input type="checkbox" name="Services[]" value="Exterior"> Exterior</label>
+<label><input type="checkbox" name="Services[]" value="Decorating"> Decorating</label>
+</div>
+
+<h3>🪚 Carpentry</h3>
+<div class="options">
+<label><input type="checkbox" name="Services[]" value="Doors"> Doors</label>
+<label><input type="checkbox" name="Services[]" value="Stairs"> Stairs</label>
+<label><input type="checkbox" name="Services[]" value="Decking"> Decking</label>
+<label><input type="checkbox" name="Services[]" value="Fencing"> Fencing</label>
+</div>
 
 <label>Other Service (if not listed)</label>
 <input type="text" name="Other Service" placeholder="Describe the service you need">
